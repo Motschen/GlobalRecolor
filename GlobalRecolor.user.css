@@ -1,0 +1,133 @@
+/* ==UserStyle==
+@name         GlobalRecolor
+@version      0.1.0
+@description  Let's you change the main and accent colors for all websites globally.
+@namespace    motschen.midnightdust.eu
+@author       Motschen
+@homepageURL  https://github.com/Motschen/GlobalRecolor
+@supportURL   https://github.com/Motschen/GlobalRecolor/issues
+@license      MIT License
+@advanced     color main-color "Main Color" #c50ed2
+@advanced     color accent-color "Accent Color" #7e0986
+@advanced     text youtube-color-shift "Youtube Logo Color Shift" 91deg
+==/UserStyle== */
+@-moz-document regexp("https?://.*") {
+   /* General */
+    a {
+        color: /*[[main-color]]*/;
+   }
+   a:hover {
+        color: /*[[main-color]]*/;
+   }
+    .icon {
+        color: /*[[main-color]]*/;
+   }
+    button {
+        background-color: /*[[accent-color]]*/;
+    }
+    
+    /* CurseForge */
+    .border-primary-500 {
+        border-color: /*[[main-color]]*/;
+        text-shadow: 0 0 5px /*[[main-color]]*/;
+    }
+    .text-primary-500 {
+        color: /*[[main-color]]*/;
+    }
+    .button, .form-gray-footer button, .body-privatemessage-create .form-submit button, .user-profile-buttons a, .input > button, .body-privatemessage-details .bcc-form .container-div-     recipients .field > button, .body-privatemessage-create .field > button {
+        background-color: /*[[accent-color]]*/ !important;
+        box-shadow: 0 0 5px 2px /*[[accent-color]]*/;
+    }
+    .curseforge-header .info-missing-link {
+        visibility: hidden;
+    }
+    
+    .curseforge-header .bg-red-500 {
+        background-color: /*[[main-color]]*/;
+        box-shadow: 0 0 5px 3px /*[[main-color]]*/;
+    }
+    .user-menu__item:hover {
+        background-color: /*[[accent-color]]*/;
+        box-shadow: 0 0 5px 3px /*[[accent-color]]*/;
+    }
+    
+    /* Old CurseForge */
+    .e-generic-header {
+     visibility: hidden;
+    }
+    div.store-itemlisting-a ul li .checkout a.button {
+         background-color: /*[[accent-color]]*/;
+         border-color: /*[[main-color]]*/;
+    }
+    .e-header-nav .e-wrapper .e-menu > li.e-selected > a::before {
+        background-color: /*[[accent-color]]*/;
+    }
+    
+    /* GitHub */
+    .UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current="false"]), .UnderlineNav-item[role="tab"][aria-selected="true"] {
+        border-bottom-color: /*[[accent-color]]*/;
+        box-shadow: 0px 58px 20px 7px /*[[accent-color]]*/;
+    }
+    summary.btn.btn-primary, a.btn.btn-sm.btn-primary, a.text-center.btn.btn-primary.ml-3 {
+        background-color: /*[[accent-color]]*/;
+        border-color: /*[[accent-color]]*/;
+        box-shadow: 0 0 15px 4px /*[[accent-color]]*/;
+    }
+    span.p-nickname.vcard-username.d-block {
+        color: /*[[main-color]]*/;
+        text-shadow: 0px 0px 5px /*[[main-color]]*/;
+    }
+    
+    /* YouTube */
+    #notification-count.ytd-notification-topbar-button-renderer {
+         background-color: /*[[accent-color]]*/;
+         box-shadow: 0 0 15px 3px /*[[accent-color]]*/;
+    }
+    .ytp-play-progress {
+	     background-color: /*[[accent-color]]*/ !important;
+         box-shadow: 0 0 10px 2px /*[[accent-color]]*/;
+    }
+    .ytp-scrubber-button {
+	    background-color:  /*[[main-color]]*/ !important;
+        box-shadow: 0 0 10px 5px /*[[main-color]]*/;
+    }
+    .ytd-topbar-logo-renderer {
+        filter: hue-rotate(/*[[youtube-color-shift]]*/);
+    }
+    .ytp-settings-button.ytp-hd-quality-badge::after {
+        background-color:  /*[[main-color]]*/ !important;
+        box-shadow: 0 0 10px 1px /*[[main-color]]*/;
+    }
+    .ytd-thumbnail-overlay-resume-playback-renderer {
+        background-color: /*[[main-color]]*/ !important;
+        box-shadow: 0 0 5px 3px /*[[accent-color]]*/;
+    }
+    button.ytp-large-play-button {
+        filter: hue-rotate(calc(/*[[youtube-color-shift]]*/ * 3));
+    }
+    #guide-icon.style-scope.ytd-masthead {
+        filter: grayscale(1) !important;
+    }
+    #subscribe-button > ytd-subscribe-button-renderer > tp-yt-paper-button {
+        background-color: /*[[accent-color]]*/ !important;
+        box-shadow: 0 0 15px 3px /*[[accent-color]]*/;
+        
+    }
+    
+    /* Brave-Search */
+    .infobox-title {
+    color: /*[[main-color]]*/;
+        text-shadow: 0px 0px 5px /*[[main-color]]*/;
+   }
+    .snippet-url {
+    color: /*[[accent-color]]*/;
+   }
+    .snippet-title {
+    color: /*[[main-color]]*/;
+        text-shadow: 0px 0px 5px /*[[main-color]]*/;
+   }
+    .deep-link {
+    color: /*[[accent-color]]*/;
+        text-shadow: 0px 0px 5px /*[[accent-color]]*/;
+   }
+}
