@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name         GlobalRecolor
-@version      0.1.0
+@version      0.1.1
 @description  Let's you change the main and accent colors for all websites globally.
 @namespace    motschen.midnightdust.eu
 @author       Motschen
 @homepageURL  https://github.com/Motschen/GlobalRecolor
 @supportURL   https://github.com/Motschen/GlobalRecolor/issues
+@updateURL    https://github.com/Motschen/GlobalRecolor/raw/main/GlobalRecolor.user.css
 @license      MIT License
 @advanced     color main-color "Main Color" #c50ed2
 @advanced     color accent-color "Accent Color" #7e0986
@@ -17,7 +18,8 @@
         color: /*[[main-color]]*/;
    }
    a:hover {
-        color: /*[[main-color]]*/;
+        color: /*[[main-color]]*/ !important;
+       text-shadow: 0 0 5px /*[[main-color]]*/;
    }
     .icon {
         color: /*[[main-color]]*/;
@@ -130,4 +132,29 @@
     color: /*[[accent-color]]*/;
         text-shadow: 0px 0px 5px /*[[accent-color]]*/;
    }
+    
+    /* Modrinth */
+    .layout .site-header .navbar section.right-group section.auth-prompt .log-in-button {
+        background-color: /*[[main-color]]*/;
+        box-shadow: 0 0 15px 3px /*[[accent-color]]*/;
+    }
+    .brand-button {
+        background-color: /*[[main-color]]*/;
+        box-shadow: 0 0 15px 3px /*[[main-color]]*/;
+    }
+    #__layout > div > main > div:nth-child(1) > div > div {
+        border-left: 5px solid /*[[main-color]]*/;
+        text-shadow: 0px 0px 5px /*[[main-color]]*/;
+    }
+    #__layout > div > header > section > section.logo.column > a > svg.text-logo {
+        filter: hue-rotate(calc(/*[[youtube-color-shift]]*/ * 2)) saturate(50);
+        
+    }
+    .tabs a.tab.active-path span, .tabs a.tab.nuxt-link-exact-active span {
+        border-bottom: 3px solid /*[[accent-color]]*/;
+    }
+    #__layout > div > header > section > section.right-group > section.column-grow-5.nav > div > div {
+        border-left: 0px solid;
+        border-top: 0px solid;
+    }
 }
